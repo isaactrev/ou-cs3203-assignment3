@@ -17,6 +17,14 @@ int productArray(int arr[], int size) {
     return product;
 }
 
+int* reverseArray(int arr[], int size) {
+    int* reversedArr = new int[size];
+    for (int i = 0; i < size; ++i) {
+        reversedArr[i] = arr[size - 1 - i];
+    }
+    return reversedArr;
+}
+
 int main() {
     int size;
 
@@ -39,7 +47,15 @@ int main() {
     int product_result = productArray(arr, size);
     cout << "The product of the array is: " << product_result << endl;
 
+    int* reversedArr = reverseArray(arr, size);
+    cout << "The reversed array is: ";
+    for (int i = 0; i < size; ++i) {
+        cout << reversedArr[i] << " ";
+    }
+    cout << endl;
+
     delete[] arr;
+    delete[] reversedArr;
 
     return 0;
 }
