@@ -47,6 +47,7 @@ int main() {
     int product_result = productArray(arr, size);
     cout << "The product of the array is: " << product_result << endl;
 
+    //Printing result for reverseArray method
     int* reversedArr = reverseArray(arr, size);
     cout << "The reversed array is: ";
     for (int i = 0; i < size; ++i) {
