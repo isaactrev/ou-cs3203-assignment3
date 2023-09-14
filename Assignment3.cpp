@@ -40,6 +40,6 @@ int main() {
     cout << "The product of the array is: " << product_result << endl;
 
     delete[] arr;
-
+    //added a comment to commit for part 10
     return 0;
 }
