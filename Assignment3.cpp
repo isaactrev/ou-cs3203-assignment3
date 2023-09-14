@@ -1,6 +1,3 @@
-// Assignment3.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 using namespace std;
 
@@ -20,7 +17,29 @@ int productArray(int arr[], int size) {
     return product;
 }
 
-int main()
-{
-    cout << "Hello World!\n";
+int main() {
+    int size;
+
+    // Ask the user for the size of the array
+    cout << "Enter the size of the array: ";
+    cin >> size;
+
+    // Dynamically allocate an array to store the numbers
+    int* arr = new int[size];
+
+    // Ask the user to enter each number
+    cout << "Enter " << size << " integers:" << endl;
+    for (int i = 0; i < size; ++i) {
+        cin >> arr[i];
+    }
+
+    int sum_result = sumArray(arr, size);
+    cout << "The sum of the array is: " << sum_result << endl;
+
+    int product_result = productArray(arr, size);
+    cout << "The product of the array is: " << product_result << endl;
+
+    delete[] arr;
+
+    return 0;
 }
